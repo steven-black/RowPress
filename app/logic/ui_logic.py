@@ -41,7 +41,6 @@ def add_placeholder_and_replacement(master):
         placeholder_and_replacement.append(placeholder_entry)
         placeholder_and_replacement.append(replacement_entry)
 
-        app_state.placeholders_and_replacements_group.append(placeholder_and_replacement)
+        app_state.placeholders_and_replacements_groups.append(placeholder_and_replacement)
 
         app_state.root.update_idletasks()
-        

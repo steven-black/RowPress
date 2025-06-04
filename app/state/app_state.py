@@ -26,7 +26,7 @@ class AppState:
         self.left_group = None
         self.right_group = None
         self.propogate_template_button = None # Button to propogate the template
-        self.placeholders_and_replacements_group = [] # List of UI elements for placeholders and replacements
+        self.placeholders_and_replacements_groups = [] # List of UI elements for placeholders and replacements
         self.placeholders_and_replacement_columns = [] # List to hold placeholder and replacement entries
 
         # UI Variables
