@@ -1,3 +1,4 @@
+import threading
 from openpyxl.utils import column_index_from_string
 
 class AppState:
@@ -20,12 +21,14 @@ class AppState:
 
         self.save_as_pdf = None # Boolean to save the output as PDF or not
         self.is_processing = False # Boolean to indicate if the app is processing data
+        self.stop_event = threading.Event() # Event to stop the processing thread
 
         # UI Elements
         self.root = None
         self.left_group = None
         self.right_group = None
         self.propogate_template_button = None # Button to propogate the template
+        self.stop_processing_button = None # Button to stop the processing
         self.placeholders_and_replacements_groups = [] # List of UI elements for placeholders and replacements
         self.placeholders_and_replacement_columns = [] # List to hold placeholder and replacement entries
 
@@ -33,15 +36,13 @@ class AppState:
         self.current_row = 0
         self.current_column = 0
 
-        #self.max_columns = self.get_max_columns()
-
     def get_max_columns(self):
             self.root.update_idletasks()
-            root_width = self.root.winfo_width()
-            left_group_width = self.left_group.winfo_width()
-            placeholder_and_replacement_width = self.placeholder_and_replacement_group.winfo_width()
-            max_columns = int((root_width + left_group_width) / placeholder_and_replacement_width)
+            
+            max_columns = int((self.root.winfo_width() - self.left_group.winfo_width()) / 50)
+            print(f"Max columns: {max_columns}")
             return max_columns
+            
     
     def get_document_name(self):
         if self.document_name_entry:
@@ -69,13 +70,12 @@ class AppState:
     
     def get_placeholders_and_replacement_columns(self):
         self.placeholder_and_replacement_columns = []
-        for placeholder_and_replacement_column in self.placeholders_and_replacements_group:
+        for placeholder_and_replacement_column in self.placeholders_and_replacements_groups:
             placeholder_entry = placeholder_and_replacement_column[0].get()
             replacement_column_entry = placeholder_and_replacement_column[1].get()
             if placeholder_entry and replacement_column_entry:
                 self.placeholders_and_replacement_columns.append((placeholder_entry, column_index_from_string(replacement_column_entry)-1))
-                return self.placeholders_and_replacement_columns
-        return []
+        return self.placeholders_and_replacement_columns
 
 
 app_state = AppState()

@@ -77,7 +77,11 @@ def launch_ui():
     app_state.propogate_template_button = ctk.CTkButton(master=app_state.left_group, text="Propogate Template", command=lambda: threading.Thread(target=propogate_template, args=(app_state.excel_file_path, app_state.word_template_path), daemon=True).start())
     app_state.propogate_template_button.grid(pady=5, column=0, row=10, sticky="nsew")
 
+    app_state.stop_processing_button = ctk.CTkButton(master=app_state.left_group, text="Stop", command=app_state.stop_event.set)
+    app_state.stop_processing_button.grid(pady=5, column=0, row=11, sticky="nsew")
+    app_state.stop_processing_button.configure(state="disabled")
+
     # test_button = ctk.CTkButton(master=app_state.left_group, text="Test", command=app_state.get_placeholders_and_replacement_columns)
-    # test_button.grid(pady=5, column=0, row=11, sticky="nsew")
+    # test_button.grid(pady=5, column=0, row=12, sticky="nsew")
 
     app_state.root.mainloop()
