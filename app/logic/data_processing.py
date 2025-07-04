@@ -179,9 +179,11 @@ def process_row(row, template_file_path, doc_name):
         if is_empty(replacement):
             replacement = "N/A"
         
+        print(f"Replacing placeholder '{placeholder}' with '{replacement}' in document: {personalized_name}")
         replace_placeholder_in_document(doc, placeholder, replacement)
 
         # Save the modified document
+        print(f"Saving document: {personalized_name}")
         os.makedirs(app_state.output_folder_path, exist_ok=True)
 
     doc.save(f"{app_state.output_folder_path}\\{personalized_name}_{doc_name}_{date.year}.docx")
@@ -234,3 +236,4 @@ def propogate_template(excel_file_path, template_file_path):
 
 
     toggle_processing_state()
+    print("Template propagation completed.")
