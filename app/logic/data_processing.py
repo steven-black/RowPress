@@ -1,5 +1,6 @@
 import os
 import datetime
+import gc
 from openpyxl.styles.numbers import is_date_format
 
 import openpyxl
@@ -187,6 +188,9 @@ def process_row(row, template_file_path, doc_name):
         os.makedirs(app_state.output_folder_path, exist_ok=True)
 
     doc.save(f"{app_state.output_folder_path}\\{personalized_name}_{doc_name}_{date.year}.docx")
+    
+    del doc
+    gc.collect()  # Force garbage collection to free memory
 
 
 def toggle_processing_state():

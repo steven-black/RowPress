@@ -4,3 +4,4 @@ openpyxl
 python-docx
 docx
 docx2pdf
+gc
