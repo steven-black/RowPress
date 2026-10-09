@@ -1,0 +1,45 @@
+## .NET build output
+[Bb]in/
+[Oo]bj/
+[Pp]ublish/
+artifacts/
+*.nupkg
+
+## Visual Studio / VS Code / Rider
+.vs/
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.rsuser
+
+## Test and debug results
+TestResults/
+[Tt]est[Rr]esult*/
+*.log
+crash.log
+
+## Generated files and secrets
+*.pfx
+*.snk
+.env
+
+## Xemplate: local test data and generated output
+## (the repo is public, so keep real names and letters out of it)
+output-docs/
+output test folder/
+test-data/
+Test Data.xlsx
+Test Template.docx
+
+## OS junk
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+## Word/Excel temp files created when a document is open
+~$*

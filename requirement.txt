@@ -1,7 +1,0 @@
-customtkinter
-pandas
-openpyxl
-python-docx
-docx
-docx2pdf
-gc

@@ -1,0 +1,23 @@
+<!-- replaces add_placeholder_and_replacement() -->
+
+<UserControl x:Class="Xemplate.Views.PlaceholderRowControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:Xemplate.ViewModels"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance Type=vm:PlaceholderRowViewModel}">
+
+    <Border BorderThickness="1" BorderBrush="Gray" CornerRadius="4" Padding="6" Margin="2">
+        <StackPanel Width="140">
+            <TextBlock Text="Placeholder:" />
+            <TextBox Text="{Binding Placeholder, UpdateSourceTrigger=PropertyChanged}" Margin="0,2,0,6" />
+
+            <TextBlock Text="Replacement Column:" />
+            <TextBox Text="{Binding ReplacementColumn, UpdateSourceTrigger=PropertyChanged}" Margin="0,2,0,6" />
+
+            <Button Content="Remove" Command="{Binding RemoveCommand}" />
+        </StackPanel>
+    </Border>
+</UserControl>
