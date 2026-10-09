@@ -4,8 +4,6 @@ Xemplate turns a Word template and an Excel sheet into personalised documents.
 Write a letter once with placeholders like `[NAME]`, point Xemplate at a sheet
 of data, and it produces one finished document (optionally as a PDF) per row.
 
-![Xemplate screenshot](docs/screenshot.png)
-
 ## Features
 
 - Fills placeholders in the body, tables, headers and footers of a Word template
@@ -25,7 +23,7 @@ No .NET installation is needed. Releases are self-contained.
 ## Download
 
 Get the latest `Xemplate.exe` from the
-[Releases page](../../releases). Because the source is public, you can also
+[Releases page](pending). Because the source is public, you can also
 build it yourself (see below).
 
 ## How to use
