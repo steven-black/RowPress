@@ -1,7 +1,7 @@
-# RowRender - Bulk Excel to PDF Document Mail Merge
+# RowPress - Bulk Excel to PDF Document Mail Merge
 
-RowRender turns a Word template and an Excel sheet into personalised documents.
-Write a letter once with placeholders like `[NAME]`, point RowRender at a sheet
+RowPress turns a Word template and an Excel sheet into personalised documents.
+Write a letter once with placeholders like `[NAME]`, point RowPress at a sheet
 of data, and it produces one finished document (optionally as a PDF) per row.
 
 ## Features
@@ -22,8 +22,8 @@ No .NET installation is needed. Releases are self-contained.
 
 ## Download
 
-Get the latest `RowRender.exe` from the
-[Releases page](https://github.com/steven-black/RowRender/releases). Because the source is public, you can also
+Get the latest `RowPress.exe` from the
+[Releases page](https://github.com/steven-black/RowPress/releases). Because the source is public, you can also
 build it yourself (see below).
 
 ## How to use
@@ -51,7 +51,7 @@ Requires the .NET 10 SDK on Windows.
 ```
 git clone <repo url>
 cd <repo folder>
-dotnet run --project RowRender
+dotnet run --project RowPress
 ```
 
 Handy shortcuts are in `dev.sh` (`./dev.sh fresh`, `./dev.sh publish`).
@@ -60,8 +60,8 @@ Handy shortcuts are in `dev.sh` (`./dev.sh fresh`, `./dev.sh publish`).
 
 Copyright (C) 2026 Steven Black
 
-RowRender is free software, licensed under the GNU General Public License v3.0.
-See the [LICENSE](https://github.com/steven-black/RowRender/blob/main/LICENSE) file for the full text.
+RowPress is free software, licensed under the GNU General Public License v3.0.
+See the [LICENSE](https://github.com/steven-black/RowPress/blob/main/LICENSE) file for the full text.
 
 ## Code signing policy
 
