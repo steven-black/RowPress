@@ -1,4 +1,4 @@
-# RowRender
+# RowRender — Bulk Excel to PDF Document Mail Merge
 
 RowRender turns a Word template and an Excel sheet into personalised documents.
 Write a letter once with placeholders like `[NAME]`, point RowRender at a sheet
