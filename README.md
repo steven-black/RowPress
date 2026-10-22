@@ -1,7 +1,7 @@
-# Xemplate
+# RowRender
 
-Xemplate turns a Word template and an Excel sheet into personalised documents.
-Write a letter once with placeholders like `[NAME]`, point Xemplate at a sheet
+RowRender turns a Word template and an Excel sheet into personalised documents.
+Write a letter once with placeholders like `[NAME]`, point RowRender at a sheet
 of data, and it produces one finished document (optionally as a PDF) per row.
 
 ## Features
@@ -22,7 +22,7 @@ No .NET installation is needed. Releases are self-contained.
 
 ## Download
 
-Get the latest `Xemplate.exe` from the
+Get the latest `RowRender.exe` from the
 [Releases page](pending). Because the source is public, you can also
 build it yourself (see below).
 
@@ -51,7 +51,7 @@ Requires the .NET 10 SDK on Windows.
 ```
 git clone <repo url>
 cd <repo folder>
-dotnet run --project Xemplate
+dotnet run --project RowRender
 ```
 
 Handy shortcuts are in `dev.sh` (`./dev.sh fresh`, `./dev.sh publish`).
@@ -60,8 +60,8 @@ Handy shortcuts are in `dev.sh` (`./dev.sh fresh`, `./dev.sh publish`).
 
 Copyright (C) 2026 Steven Black
 
-Xemplate is free software, licensed under the GNU General Public License v3.0.
-See the [LICENSE](https://github.com/steven-black/Xemplate/blob/main/LICENSE) file for the full text.
+RowRender is free software, licensed under the GNU General Public License v3.0.
+See the [LICENSE](https://github.com/steven-black/RowRender/blob/main/LICENSE) file for the full text.
 
 ## Code signing policy
 
