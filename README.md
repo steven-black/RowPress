@@ -23,7 +23,7 @@ No .NET installation is needed. Releases are self-contained.
 ## Download
 
 Get the latest `RowRender.exe` from the
-[Releases page](pending). Because the source is public, you can also
+[Releases page](https://github.com/steven-black/RowRender/releases). Because the source is public, you can also
 build it yourself (see below).
 
 ## How to use
